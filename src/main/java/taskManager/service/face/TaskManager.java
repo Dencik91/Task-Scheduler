@@ -1,12 +1,12 @@
 package taskManager.service.face;
 
-import taskManager.service.impl.ServerNotification;
+import taskManager.dataTransferObject.TaskDTO;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public interface TaskManager {
-    ArrayList<ServerNotification> listAllTasks();
     void checkAllTasks();
-    void changeTaskCompleted(ServerNotification task);
-    void showTaskCompleted(ServerNotification task);
+    void changeTaskCompleted(TaskDTO task);
+    void showTaskCompleted(TaskDTO task);
 }
