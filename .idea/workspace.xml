@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94827dfd-e42e-4b01-9c59-baff41f63359" name="Changes" comment="" />
+    <list default="true" id="94827dfd-e42e-4b01-9c59-baff41f63359" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/taskManager/service/impl/ServerNotification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/taskManager/service/impl/ServerNotification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/taskManager/service/impl/TaskManagerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/taskManager/service/impl/TaskManagerImpl.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,9 +16,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2mSccOynid56U5nVN3OBb9EbgHX" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -24,11 +27,33 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.ServerNotification.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true"
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/denisa/IdeaProjects/Task-Scheduler"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="ServerNotification" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="taskManager.service.impl.ServerNotification" />
+      <module name="Task-Scheduler" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="taskManager.service.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ServerNotification" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

@@ -13,6 +13,10 @@ public class TaskManagerImpl implements TaskManager {
     private List<TaskDTO> listAllTasks = new ArrayList<>();
     private final Logger logger = Logger.getLogger(TaskManagerImpl.class.getName());
 
+    public TaskManagerImpl(List<TaskDTO> listAllTasks) {
+        this.listAllTasks = listAllTasks;
+    }
+
     public void checkAllTasks() {
         for (TaskDTO task : listAllTasks) {
             if(task.getExecutionTime().isBefore(LocalDateTime.now()) && task.getTaskStatus() == Status.IN_PROGRESS) {
