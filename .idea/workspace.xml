@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94827dfd-e42e-4b01-9c59-baff41f63359" name="Changes" comment="Task-scheduler initial version">
+    <list default="true" id="94827dfd-e42e-4b01-9c59-baff41f63359" name="Changes" comment="Task-scheduler before postgres connection">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/taskManager/Status.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/taskManager/Status.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/taskManager/dataTransferObject/TaskDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/taskManager/dataTransferObject/TaskDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/taskManager/service/impl/PostgresConector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/taskManager/service/impl/PostgresConector.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/taskManager/service/impl/ServerNotification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/taskManager/service/impl/ServerNotification.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/taskManager/service/impl/TaskManagerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/taskManager/service/impl/TaskManagerImpl.java" afterDir="false" />
     </list>
@@ -14,6 +16,13 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -27,17 +36,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.ServerNotification.executor": "Run",
-    "Maven.Task-Scheduler [package].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/denisa/IdeaProjects/Task-Scheduler"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.ServerNotification.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Task-Scheduler [package].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/denisa/IdeaProjects/Task-Scheduler&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="ServerNotification" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="taskManager.service.impl.ServerNotification" />
@@ -75,11 +84,20 @@
       <option name="project" value="LOCAL" />
       <updated>1727091112434</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Task-scheduler before postgres connection">
+      <option name="closed" value="true" />
+      <created>1727166844656</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1727166844656</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Task-scheduler initial version" />
-    <option name="LAST_COMMIT_MESSAGE" value="Task-scheduler initial version" />
+    <MESSAGE value="Task-scheduler before postgres connection" />
+    <option name="LAST_COMMIT_MESSAGE" value="Task-scheduler before postgres connection" />
   </component>
 </project>

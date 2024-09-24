@@ -1,6 +1,7 @@
 package taskManager.service.impl;
 
 
+import taskManager.Status;
 import taskManager.dataTransferObject.TaskDTO;
 
 import java.time.LocalDateTime;
@@ -11,9 +12,17 @@ public class ServerNotification {
     static boolean isRunning = true;
 
     public static void startServer() {
-        taskManager = new TaskManagerImpl(List.of(new TaskDTO("Task1", LocalDateTime.now().plusSeconds(5))));
         while (isRunning) {
+            taskManager = new TaskManagerImpl(PostgresConector.connect());
             taskManager.checkAllTasks();
+
+            try {
+                // Așteaptă 5 secunde înainte de a verifica din nou
+                Thread.sleep(5000);
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt(); // Restartează flag-ul de întrerupere
+                System.out.println("Server interrupted");
+            }
         }
     }
 

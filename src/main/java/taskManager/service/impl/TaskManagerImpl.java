@@ -27,7 +27,7 @@ public class TaskManagerImpl implements TaskManager {
     }
 
     public void changeTaskCompleted(TaskDTO task) {
-        task.setTaskStatus(Status.COMPLETED);
+        PostgresConector.taskCompleted(task.getTaskName());
     }
 
     public void showTaskCompleted(TaskDTO task) {

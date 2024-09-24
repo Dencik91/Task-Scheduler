@@ -13,10 +13,10 @@ public class TaskDTO {
     private LocalDateTime executionTime;
     private Status taskStatus;
 
-    public TaskDTO(String taskName, LocalDateTime executionTime) {
+    public TaskDTO(String taskName, LocalDateTime executionTime, Status taskStatus) {
         this.taskName = taskName;
         this.executionTime = executionTime;
-        this.taskStatus = Status.IN_PROGRESS;
+        this.taskStatus = taskStatus;
     }
 
 }
