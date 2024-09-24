@@ -11,7 +11,7 @@ public class ServerNotification {
     static boolean isRunning = true;
 
     public static void startServer() {
-        taskManager = new TaskManagerImpl(List.of(new TaskDTO("Task1", LocalDateTime.now())));
+        taskManager = new TaskManagerImpl(List.of(new TaskDTO("Task1", LocalDateTime.now().plusSeconds(5))));
         while (isRunning) {
             taskManager.checkAllTasks();
         }

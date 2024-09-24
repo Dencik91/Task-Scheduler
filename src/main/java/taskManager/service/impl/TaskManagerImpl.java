@@ -35,4 +35,5 @@ public class TaskManagerImpl implements TaskManager {
             logger.info("Task " + task.getTaskName() + " is completed");
         }
     }
+
 }
