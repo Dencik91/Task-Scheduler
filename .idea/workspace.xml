@@ -4,13 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94827dfd-e42e-4b01-9c59-baff41f63359" name="Changes" comment="Task-scheduler before postgres connection">
+    <list default="true" id="94827dfd-e42e-4b01-9c59-baff41f63359" name="Changes" comment="Task-scheduler add conection to database, not good">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/taskManager/Status.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/taskManager/Status.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/taskManager/dataTransferObject/TaskDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/taskManager/dataTransferObject/TaskDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/taskManager/service/impl/PostgresConector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/taskManager/service/impl/PostgresConector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/taskManager/service/impl/ServerNotification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/taskManager/service/impl/ServerNotification.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/taskManager/service/impl/TaskManagerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/taskManager/service/impl/TaskManagerImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/README.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/taskManager/Status.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/task_manager/Status.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/taskManager/dataTransferObject/TaskDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/task_manager/dataTransferObject/TaskDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/taskManager/service/face/TaskManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/task_manager/service/face/TaskManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/taskManager/service/impl/PostgresConector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/task_manager/service/impl/PostgresConnector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/taskManager/service/impl/ServerNotification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/task_manager/service/impl/ServerNotification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/taskManager/service/impl/TaskManagerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/task_manager/service/impl/TaskManagerImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,11 +52,11 @@
 }</component>
   <component name="RunManager">
     <configuration name="ServerNotification" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="taskManager.service.impl.ServerNotification" />
+      <option name="MAIN_CLASS_NAME" value="task_manager.service.impl.ServerNotification" />
       <module name="Task-Scheduler" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="taskManager.service.impl.*" />
+          <option name="PATTERN" value="task_manager.service.impl.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -92,12 +95,21 @@
       <option name="project" value="LOCAL" />
       <updated>1727166844656</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Task-scheduler add conection to database, not good">
+      <option name="closed" value="true" />
+      <created>1727180382244</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1727180382244</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Task-scheduler initial version" />
     <MESSAGE value="Task-scheduler before postgres connection" />
-    <option name="LAST_COMMIT_MESSAGE" value="Task-scheduler before postgres connection" />
+    <MESSAGE value="Task-scheduler add conection to database, not good" />
+    <option name="LAST_COMMIT_MESSAGE" value="Task-scheduler add conection to database, not good" />
   </component>
 </project>

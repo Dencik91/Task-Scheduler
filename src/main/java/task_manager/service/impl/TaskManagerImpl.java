@@ -1,17 +1,18 @@
-package taskManager.service.impl;
+package task_manager.service.impl;
 
-import taskManager.Status;
-import taskManager.dataTransferObject.TaskDTO;
-import taskManager.service.face.TaskManager;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import task_manager.Status;
+import task_manager.dataTransferObject.TaskDTO;
+import task_manager.service.face.TaskManager;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Logger;
+
 
 public class TaskManagerImpl implements TaskManager {
-    private List<TaskDTO> listAllTasks = new ArrayList<>();
-    private final Logger logger = Logger.getLogger(TaskManagerImpl.class.getName());
+    private final List<TaskDTO> listAllTasks;
+    private final Logger logger = LoggerFactory.getLogger(TaskManagerImpl.class);
 
     public TaskManagerImpl(List<TaskDTO> listAllTasks) {
         this.listAllTasks = listAllTasks;
@@ -27,12 +28,12 @@ public class TaskManagerImpl implements TaskManager {
     }
 
     public void changeTaskCompleted(TaskDTO task) {
-        PostgresConector.taskCompleted(task.getTaskName());
+        PostgresConnector.taskCompleted(task.getTaskName());
     }
 
     public void showTaskCompleted(TaskDTO task) {
         if(task.getTaskStatus() == Status.COMPLETED) {
-            logger.info("Task " + task.getTaskName() + " is completed");
+            logger.info("Task {} is completed", task.getTaskName());
         }
     }
 

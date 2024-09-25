@@ -4,7 +4,7 @@ Aplicație cu Taskuri și cu notificări programate
 Cerință tehnică:
     Creați un server Java care va stoca într-un ArrayList unul sau mai multe taskuri.
 
-    Serverul ar trebui să verifice periodic sarcinile care sunt scadente și să trimită un mesaj de tip log în consola aplicației atunci când timpul de execuție al unui task a fost atins.
+    Serverul ar trebui să verifice periodic sarcinile care sunt scadente și să trimită un mesaj de tip log în consola aplicației atunci când timpul de execuție al unui task_manager a fost atins.
 
     După aceea, serverul trebuie să marcheze taskul ca finalizat.
 

@@ -1,20 +1,24 @@
-package taskManager.service.impl;
+package task_manager.service.impl;
 
-import taskManager.Status;
-import taskManager.dataTransferObject.TaskDTO;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import task_manager.Status;
+import task_manager.dataTransferObject.TaskDTO;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Logger;
 
-public class PostgresConector {
-    private static Logger logger = Logger.getLogger(PostgresConector.class.getName());
-    private static String URL = "jdbc:postgresql://192.168.136.129:5432/postgres";
-    private static String USER = "postgres";
-    private static String PASSWORD = "yourpassword";
-    private static String sqlGetAllTasks = "SELECT * FROM tasks";
-    private static List<TaskDTO> results = new ArrayList<>();
+public class PostgresConnector {
+    private static final Logger logger = LoggerFactory.getLogger(PostgresConnector.class);
+    private static final String URL = "jdbc:postgresql://192.168.136.129:5432/postgres";
+    private static final String USER = "postgres";
+    private static final String PASSWORD = "yourpassword";
+    private static final List<TaskDTO> results = new ArrayList<>();
+
+    private PostgresConnector() {
+        throw new IllegalStateException("Utility class");
+    }
 
     public static List<TaskDTO> connect() {
         Connection connection = null;
@@ -23,7 +27,8 @@ public class PostgresConector {
 
         try {
             connection = DriverManager.getConnection(URL, USER, PASSWORD);
-            logger.info("Connection to database is successful");
+            logger.info("Connection to database for consume is successful");
+            String sqlGetAllTasks = "SELECT * FROM tasks";
             preparedStatement = connection.prepareStatement(sqlGetAllTasks);
             resultSet = preparedStatement.executeQuery();
 
@@ -31,7 +36,7 @@ public class PostgresConector {
                 results.add(new TaskDTO(resultSet.getString("taskName"),
                         resultSet.getTimestamp("executionTime").toLocalDateTime(),
                         Status.valueOf(resultSet.getString("taskStatus"))));
-                logger.info("Task " + resultSet.getString("taskName") + " is added to the list");
+                logger.info("Task {} is added to the list", resultSet.getString("taskName"));
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -50,16 +55,15 @@ public class PostgresConector {
     public static void taskCompleted(String taskName) {
         Connection connection = null;
         PreparedStatement preparedStatement = null;
-        ResultSet resultSet = null;
-        String sqlUpdate = "UPDATE tasks SET taskStatus = 'COMPLETED' WHERE taskName = ?";
+        String sqlUpdate = "UPDATE tasks SET taskStatus = 'COMPLETED' WHERE taskName = ?;";
 
         try {
             connection = DriverManager.getConnection(URL, USER, PASSWORD);
-            logger.info("Connection to database is successful");
+            logger.info("Connection to database for Update is successful");
             preparedStatement = connection.prepareStatement(sqlUpdate);
             preparedStatement.setString(1, taskName);
             preparedStatement.executeUpdate();
-            logger.info("Task " + taskName + " in DB is changed to COMPLETED");
+            logger.info("Task {} in DB is changed to COMPLETED", taskName);
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {

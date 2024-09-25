@@ -1,8 +1,8 @@
-package taskManager.dataTransferObject;
+package task_manager.dataTransferObject;
 
 import lombok.Getter;
 import lombok.Setter;
-import taskManager.Status;
+import task_manager.Status;
 
 import java.time.LocalDateTime;
 

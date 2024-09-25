@@ -1,9 +1,6 @@
-package taskManager.service.face;
+package task_manager.service.face;
 
-import taskManager.dataTransferObject.TaskDTO;
-
-import java.util.ArrayList;
-import java.util.List;
+import task_manager.dataTransferObject.TaskDTO;
 
 public interface TaskManager {
     void checkAllTasks();
